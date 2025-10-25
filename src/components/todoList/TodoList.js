@@ -4,23 +4,28 @@ import styles from './todoList.module.css';
 const TODOS_MOCK = [
 	{
 		"id": "001",
-		"task": "Приготовить завтрак и не опоздать на работу",
+		"title": "Приготовить завтрак и не опоздать на работу",
+		"completed": false
 	},
 	{
 		"id": "002",
-		"task": "Проработать 8 часов и не умереть",
+		"title": "Проработать 8 часов и не умереть",
+		"completed": false
 	},
 	{
 		"id": "003",
-		"task": "Сходить в магазин за продуктами",
+		"title": "Сходить в магазин за продуктами",
+		"completed": false
 	},
 	{
 		"id": "004",
-		"task": "Прочитать 20 страниц книги перед сном",
+		"title": "Прочитать 20 страниц книги перед сном",
+		"completed": false
 	},
 	{
 		"id": "005",
-		"task": "Лечь спать вовремя и наконец-то выспаться",
+		"title": "Лечь спать вовремя и наконец-то выспаться",
+		"completed": false
 	},
 ];
 
@@ -50,9 +55,9 @@ export const TodoList = () => {
 			<ul className={styles.list}>
 				{isLoading
 					? <div className={styles.loader}></div>
-					: todos.map(({ id, task }) => (
+					: todos.map(({ id, title }) => (
 					<li key={id} className={styles.listItem}>
-						{task}
+						{title}
 					</li>
 				))}
 			</ul>
